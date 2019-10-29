@@ -1,0 +1,23 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN" "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<node>
+  <interface name="de.vanille.NetRadio">
+    <method name="ListGenres">
+      <arg type="a(is)" direction="out"/>
+    </method>
+    <method name="ListStations">
+      <arg name="id" type="i" direction="in"/>
+      <arg type="a(is)" direction="out"/>
+    </method>
+    <method name="PlayStation">
+      <arg name="id" type="s" direction="in"/>
+    </method>
+    <method name="Stop">
+    </method>
+  </interface>
+  <fso:errordomain name="de.vanille.NetRadio" fso:no-container="true">
+  <error name="InvalidGenre">
+  </error>
+  <error name="InvalidStation">
+  </error>
+</node>
+
